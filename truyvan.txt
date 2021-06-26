@@ -1,0 +1,33 @@
+--cau1:
+SELECT `id`,`name`,`price`,`pro_images`,`description` FROM `product`
+--cau2:
+SELECT * FROM `product` WHERE `id` = 10
+--cau3:
+SELECT * FROM `product` WHERE `type_id` = 1
+--cau4:
+SELECT `product`.*FROM `product`,`manufactures` 
+WHERE `manufactures`.`manu_id`=`product`.`manu_id` 
+AND `manufactures`.`manu_name`="Apple"
+--cau5:
+SELECT * FROM `product` ORDER BY created_at DESC LIMIT 0,10
+--cau6:
+SELECT *FROM `product` created_at ORDER BY created_at DESC LIMIT 10,20
+--cau7:
+SELECT * FROM `product` WHERE `description` LIKE "128GB" 
+--cau8:
+DELETE FROM `product` WHERE id = 10
+--cau9:
+INSERT INTO `product`(`id`, `name`,`manu_id`,`price`,`pro_images`,`description`,`feature`,`created_at`)
+--cau10:
+UPDATE `product` set price = 899000 WHERE id = 10
+
+
+
+
+
+
+
+
+
+
+
